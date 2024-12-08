@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesinsart - Sobre Nosotros</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="p-4 flex flex-col items-center">
+        <div class="text-lg font-semibold">
+            <div class="title-container">
+                <div class="title">
+                    Mensin's Art
+                    <span class="handle">@mensins_art</span>
+                </div>
+                <div class="subtitle">"Happiness is found in the little things"</div>
+            </div>
+        </div>
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-8 mt-2">
+            <a href="index.html" class="menu-item hover:text-gray-800">Inicio</a>
+            <a href="catalog.html" class="menu-item hover:text-gray-800">Mensin's Expo</a>
+            <a href="about.html" class="menu-item hover:text-gray-800 active">Sobre Nosotros</a>
+            <a href="contact.html" class="menu-item hover:text-gray-800">Contacto</a>
+            <a href="blog.html" class="menu-item hover:text-gray-800">Mensin's Blog</a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button aria-label="Menú" class="text-black md:hidden mt-2" onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="text-center py-12 px-4">
+        <section id="about">
+            <h1 class="title">Sobre Nosotros</h1>
+            <p class="section-content">Somos una galería dedicada a inspirar a través del arte. Nuestro equipo selecciona cuidadosamente las mejores obras para que vivas experiencias únicas y emocionantes.</p>
+            <p class="section-content mt-4">Creemos que el arte tiene el poder de transformar y enriquecer vidas, y estamos comprometidos a brindar una plataforma para artistas emergentes y establecidos.</p>
+            <p class="section-content mt-4">Visítanos en nuestra galería para explorar obras únicas que capturan la esencia de la creatividad y el espíritu humano.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-black py-6 text-center">
+        <p class="text-sm">&copy; 2024 Mesinsart. Todos los derechos reservados.</p>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
 
