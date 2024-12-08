@@ -4,38 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesinsart - Contacto</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Mesinsart</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="catalog.html">Catálogo</a></li>
-                <li><a href="about.html">Sobre Nosotros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-            </ul>
+    <!-- Header -->
+    <header class="p-4 flex flex-col items-center">
+        <div class="text-lg font-semibold">
+            <div class="title-container">
+                <div class="title">
+                    Mensin's Art
+                    <span class="handle">@mensins_art</span>
+                </div>
+                <div class="subtitle">"Happiness is found in the little things"</div>
+            </div>
+        </div>
+        <!-- Menú de navegación -->
+        <nav id="menu" class="hidden md:flex space-x-8 mt-2">
+            <a href="index.html" class="menu-item hover:text-gray-800">Inicio</a>
+            <a href="catalog.html" class="menu-item hover:text-gray-800">Mensin's Expo</a>
+            <a href="about.html" class="menu-item hover:text-gray-800">Sobre Nosotros</a>
+            <a href="contact.html" class="menu-item hover:text-gray-800">Contacto</a>
+            <a href="blog.html" class="menu-item hover:text-gray-800">Mensin's Blog</a>
         </nav>
+        <!-- Botón para menú móvil -->
+        <button aria-label="Menú" class="text-black md:hidden mt-2" onclick="toggleMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
     </header>
-    <main>
-        <section>
-            <h2>Contacto</h2>
-            <p>¿Tienes alguna consulta? Contáctanos a través de este formulario o nuestros canales oficiales.</p>
-            <form action="#" method="POST">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+
+    <!-- Contenido Principal -->
+    <main class="text-center py-12 px-4">
+        <section id="contact">
+            <h1 class="title">Contacto</h1>
+            <p class="section-content">Escríbenos a través de nuestras redes sociales o completa el formulario para más información.</p>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Mesinsart</p>
+
+    <!-- Footer -->
+    <footer class="text-black py-6 text-center">
+        <p class="text-sm">&copy; 2024 Mesinsart. Todos los derechos reservados.</p>
     </footer>
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>
+

@@ -1,87 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mesinsart</title>
+    <title>Mesinsart - Inicio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Raleway', sans-serif;
-            background-color: #FFD1DC; /* Pastel pink for entire page background */
-        }
-        header {
-            background-color: #B8E4C9; /* Pastel green for header */
-        }
-        footer {
-            background-color: #B8E4C9; /* Pastel green for footer */
-        }
-        .menu-item {
-            color: black; /* Black text for menu items */
-            transition: color 0.3s ease;
-        }
-        .menu-item:hover {
-            color: #FF69B4; /* Slightly darker pink on hover */
-        }
-        .menu-overlay {
-            background-color: rgba(184, 228, 201, 0.8); /* Slightly transparent pastel green */
-        }
-        .hidden-section {
-            display: none;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="p-4 flex justify-between items-center">
-        <div class="text-lg font-semibold">MESINSART<br><span class="text-sm font-light">ARTE QUE INSPIRA</span></div>
-        <div class="hidden md:flex space-x-8">
-            <a href="#" class="menu-item hover:text-gray-800" data-target="inicio">Inicio</a>
-            <a href="#" class="menu-item hover:text-gray-800" data-target="catalogo">Catálogo</a>
-            <a href="#" class="menu-item hover:text-gray-800" data-target="about">Sobre Nosotros</a>
-            <a href="#" class="menu-item hover:text-gray-800" data-target="contact">Contacto</a>
+    <header class="p-4 flex flex-col items-center">
+        <div class="text-lg font-semibold">
+            <div class="title-container">
+                <div class="title">
+                    Mensin's Art
+                    <span class="handle">@mensins_art</span>
+                </div>
+                <div class="subtitle">"Happiness is found in the little things"</div>
+            </div>
         </div>
-        <button aria-label="Menu" class="text-black md:hidden" onclick="toggleMenu()">
+        <!-- Navigation Menu -->
+        <nav id="menu" class="hidden md:flex space-x-8 mt-2">
+            <a href="index.html" class="menu-item hover:text-gray-800">Inicio</a>
+            <a href="catalog.html" class="menu-item hover:text-gray-800">Mensin's Expo</a>
+            <a href="about.html" class="menu-item hover:text-gray-800">Sobre Nosotros</a>
+            <a href="contact.html" class="menu-item hover:text-gray-800">Contacto</a>
+            <a href="blog.html" class="menu-item hover:text-gray-800">Mensin's Blog</a>
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button aria-label="Menú" class="text-black md:hidden mt-2" onclick="toggleMenu()">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
             </svg>
         </button>
     </header>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="menu" class="fixed inset-0 z-50 hidden menu-overlay flex flex-col justify-center items-center text-black text-lg space-y-4">
-        <button class="absolute top-5 right-5 text-black" onclick="toggleMenu()">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        <a href="#" class="menu-item hover:underline" data-target="inicio">Inicio</a>
-        <a href="#" class="menu-item hover:underline" data-target="catalogo">Catálogo</a>
-        <a href="#" class="menu-item hover:underline" data-target="about">Sobre Nosotros</a>
-        <a href="#" class="menu-item hover:underline" data-target="contact">Contacto</a>
-    </div>
-
     <!-- Main Content -->
     <main class="text-center py-12 px-4">
-        <section id="inicio" class="section">
-            <h1 class="text-3xl font-bold">Bienvenidos a Mesinsart</h1>
-            <p class="text-gray-800 mt-2">Descubre arte que inspira y trasciende.</p>
-        </section>
-
-        <section id="catalogo" class="section hidden-section">
-            <h2 class="text-2xl font-semibold">Catálogo</h2>
-            <p class="text-gray-800 mt-2">Explora nuestras obras destacadas.</p>
-        </section>
-
-        <section id="about" class="section hidden-section">
-            <h2 class="text-2xl font-semibold">Sobre Nosotros</h2>
-            <p class="text-gray-800 mt-2">Somos una galería que busca inspirar a través del arte.</p>
-        </section>
-
-        <section id="contact" class="section hidden-section">
-            <h2 class="text-2xl font-semibold">Contacto</h2>
-            <p class="text-gray-800 mt-2">Escríbenos para más información.</p>
+        <section id="inicio">
+            <h1 class="title">Bienvenidos a Mesin's Art</h1>
+            <p class="section-content">Descubre arte que inspira y trasciende.</p>
         </section>
     </main>
 
@@ -89,46 +48,6 @@
     <footer class="text-black py-6 text-center">
         <p class="text-sm">&copy; 2024 Mesinsart. Todos los derechos reservados.</p>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // Function to show the target section
-        function showSection(target) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => section.classList.add('hidden-section'));
-
-            // Show the target section
-            const targetSection = document.getElementById(target);
-            if (targetSection) {
-                targetSection.classList.remove('hidden-section');
-            }
-        }
-
-        // Add event listeners to menu items
-        const menuItems = document.querySelectorAll('.menu-item');
-        menuItems.forEach(item => {
-            item.addEventListener('click', (event) => {
-                event.preventDefault(); // Prevent default anchor behavior
-                const target = item.getAttribute('data-target');
-                showSection(target);
-
-                // Hide the mobile menu if open
-                const menu = document.getElementById('menu');
-                if (!menu.classList.contains('hidden')) {
-                    menu.classList.add('hidden');
-                }
-            });
-        });
-
-        // Show the "Inicio" section by default
-        showSection('inicio');
-    </script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
-
-
